@@ -1,1 +1,8 @@
-{}
+{
+    "campaings": "campaigns",
+    "education": "education",
+    "home": "home",
+    "readings": "readings",
+    "resources": "resources",
+    "summer-camp": "summer-camp"
+}

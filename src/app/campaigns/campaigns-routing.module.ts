@@ -3,7 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { CampaignsComponent } from './campaigns.component';
 
-const routes: Routes = [{ path: '', component: CampaignsComponent }];
+// TODO: remove wildcard
+const routes: Routes = [{ path: '', component: CampaignsComponent }, {path: '**', redirectTo: ''}];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
