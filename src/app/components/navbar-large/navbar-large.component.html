@@ -1,0 +1,78 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light" *transloco="let t">
+    <a class="navbar-brand" [routerLink]="['/']">{{ t("home") | titlecase }}</a>
+  
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" [ngClass]="{ active: activeRoute?.startsWith('/summer-camp') }">
+          <div class="btn-group" dropdown>
+            <a
+              dropdownToggle
+              class="nav-link dropdown-toggle clickable"
+              aria-controls="dropdown-basic"
+            >
+              {{ t("summer-camp") | titlecase }}
+  
+              <span class="caret"></span>
+            </a>
+            <ul
+              id="dropdown-basic"
+              *dropdownMenu
+              class="dropdown-menu"
+              role="menu"
+              aria-labelledby="button-basic"
+            >
+              <li role="menuitem">
+                <a class="dropdown-item" [routerLink]="['/summer-camp/camp-2018']">Ostrołęka C</a>
+              </li>
+              <li role="menuitem">
+                <a class="dropdown-item" [routerLink]="['/summer-camp/camp-2019']">ZE PAK</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+  
+        <li class="nav-item" [ngClass]="{ active: activeRoute === '/education' }">
+          <a
+            [routerLink]="['/education']"
+            class="nav-link waves-light"
+            mdbWavesEffect
+          >
+            {{ t("education") | titlecase }}
+          </a>
+        </li>
+  
+        <li class="nav-item" [ngClass]="{ active: activeRoute === '/resources' }">
+          <a
+            [routerLink]="['/resources']"
+            class="nav-link waves-light"
+            mdbWavesEffect
+          >
+            {{ t("resources") | titlecase }}
+          </a>
+        </li>
+  
+        <li class="nav-item" [ngClass]="{ active: activeRoute === '/readings' }">
+          <a
+            [routerLink]="['/readings']"
+            class="nav-link waves-light"
+            mdbWavesEffect
+          >
+            {{ t("readings") | titlecase }}
+          </a>
+        </li>
+        
+        <li
+          class="nav-item"
+          [ngClass]="{ active: activeRoute === '/campaigns' }"
+        >
+          <a
+            [routerLink]="['/campaigns']"
+            class="nav-link waves-light"
+            mdbWavesEffect
+          >
+            {{ t("campaigns") | titlecase }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>

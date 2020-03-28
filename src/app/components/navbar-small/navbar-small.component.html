@@ -1,0 +1,104 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light" *transloco="let t">
+  <a class="navbar-brand" [routerLink]="['/']">{{ t("home") | titlecase }}</a>
+  <button
+    class="navbar-toggler hamburger"
+    [ngClass]="{ 'is-active': menuVisible }"
+    type="button"
+    data-toggle="collapse"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+    (click)="toggleMenu()"
+  >
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </button>
+
+  <div
+    class="collapse navbar-collapse"
+    [ngClass]="{ show: menuVisible }"
+    id="navbarSupportedContent"
+  >
+    <ul class="navbar-nav mr-auto">
+      <li
+        class="nav-item"
+        [ngClass]="{ active: activeRoute?.startsWith('/summer-camp') }"
+      >
+        <a
+          (click)="toggleSubmenu('summer-camp')"
+          [attr.aria-expanded]="submenusVisible['summer-camp']"
+          class="nav-link dropdown-toggle clickable"
+          aria-controls="dropdown-basic"
+        >
+          {{ t("summer-camp") | titlecase }}
+
+          <span class="caret"></span>
+        </a>
+        <ul
+          id="dropdown-basic"
+          class="submenu"
+          [ngClass]="{ expanded: submenusVisible['summer-camp'] }"
+          role="menu"
+          aria-labelledby="button-basic"
+        >
+          <li
+            role="menuitem"
+            [ngClass]="{ active: activeRoute === '/summer-camp/camp-2018' }"
+          >
+            <a class="dropdown-item" [routerLink]="['/summer-camp/camp-2018']"
+              >Obóz 2018</a
+            >
+          </li>
+          <li
+            role="menuitem"
+            [ngClass]="{ active: activeRoute === '/summer-camp/camp-2019' }"
+          >
+            <a class="dropdown-item" [routerLink]="['/summer-camp/camp-2019']"
+              >Obóz 2019</a
+            >
+          </li>
+        </ul>
+      </li>
+
+      <li class="nav-item" [ngClass]="{ active: activeRoute === '/education' }">
+        <a
+          [routerLink]="['/education']"
+          class="nav-link waves-light"
+          mdbWavesEffect
+        >
+          {{ t("education") | titlecase }}
+        </a>
+      </li>
+
+      <li class="nav-item" [ngClass]="{ active: activeRoute === '/resources' }">
+        <a
+          [routerLink]="['/resources']"
+          class="nav-link waves-light"
+          mdbWavesEffect
+        >
+          {{ t("resources") | titlecase }}
+        </a>
+      </li>
+
+      <li class="nav-item" [ngClass]="{ active: activeRoute === '/readings' }">
+        <a
+          [routerLink]="['/readings']"
+          class="nav-link waves-light"
+          mdbWavesEffect
+        >
+          {{ t("readings") | titlecase }}
+        </a>
+      </li>
+      <li class="nav-item" [ngClass]="{ active: activeRoute === '/campaigns' }">
+        <a
+          [routerLink]="['/campaigns']"
+          class="nav-link waves-light"
+          mdbWavesEffect
+        >
+          {{ t("campaings") | titlecase }}
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

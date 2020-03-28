@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
+import { Component, HostListener } from '@angular/core';
+import { MENU_BREAKPOINT } from './modules/shared/magic-strings';
 
 @Component({
   selector: 'app-root',
@@ -7,14 +7,14 @@ import { Router, NavigationEnd } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  activeRoute = '/';
 
-  constructor(private router: Router) {
-    this.router.events.subscribe(event => {
-      if(event instanceof NavigationEnd) {
-        this.activeRoute = event.url;
-        console.log(this.activeRoute);
-      }
-    });
+  smallNavbarVisible: boolean;
+  constructor() {
+    this.smallNavbarVisible = document.documentElement.offsetWidth < MENU_BREAKPOINT;
+  }
+
+  @HostListener('window: resize')
+  onResize() {
+    this.smallNavbarVisible = document.documentElement.offsetWidth < MENU_BREAKPOINT;
   }
 }

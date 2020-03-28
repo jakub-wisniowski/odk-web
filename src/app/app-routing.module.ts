@@ -5,31 +5,31 @@ const routes: Routes = [
   {
     path: "campaigns",
     loadChildren: () =>
-      import("./campaigns/campaigns.module").then(m => m.CampaignsModule)
+      import("./modules/campaigns/campaigns.module").then(m => m.CampaignsModule)
   },
   {
     path: "education",
     loadChildren: () =>
-      import("./education/education.module").then(m => m.EducationModule)
+      import("./modules/education/education.module").then(m => m.EducationModule)
   },
   {
     path: "home",
-    loadChildren: () => import("./home/home.module").then(m => m.HomeModule)
+    loadChildren: () => import("./modules/home/home.module").then(m => m.HomeModule)
   },
   {
     path: "readings",
     loadChildren: () =>
-      import("./readings/readings.module").then(m => m.ReadingsModule)
+      import("./modules/readings/readings.module").then(m => m.ReadingsModule)
   },
   {
     path: "resources",
     loadChildren: () =>
-      import("./resources/resources.module").then(m => m.ResourcesModule)
+      import("./modules/resources/resources.module").then(m => m.ResourcesModule)
   },
   {
     path: "summer-camp",
     loadChildren: () =>
-      import("./summer-camp/summer-camp.module").then(m => m.SummerCampModule)
+      import("./modules/summer-camp/summer-camp.module").then(m => m.SummerCampModule)
   }
 ];
 
