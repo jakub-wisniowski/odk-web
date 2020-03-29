@@ -10,12 +10,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { TranslocoRootModule } from './transloco-root.module';
 import { NavbarLargeComponent } from './components/navbar-large/navbar-large.component';
 import { NavbarSmallComponent } from './components/navbar-small/navbar-small.component';
+import { LanguageToggleComponent } from './components/language-toggle/language-toggle.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarLargeComponent,
-    NavbarSmallComponent
+    NavbarSmallComponent,
+    LanguageToggleComponent
   ],
   imports: [
     BrowserModule,

@@ -1,10 +1,19 @@
 @import "~src/styles/styles";
 
+#navbarSuportedContent.show {
+  .navbar-nav {
+    min-height: 300px;
+    .dropup {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}
 .nav-item {
   font-size: 20px;
 
   .submenu {
-    max-height: 0px;
+    max-height: 0;
     overflow: hidden;
     transition: max-height 500ms;
 
