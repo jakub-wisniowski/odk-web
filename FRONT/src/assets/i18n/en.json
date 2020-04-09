@@ -1,8 +1,11 @@
 {
-    "campaings": "campaigns",
+    "campaigns": "campaigns",
     "education": "education",
     "home": "home",
     "readings": "readings",
     "resources": "resources",
-    "summer-camp": "summer camp"
+    "summer-camp": "summer camp",
+    "camp-2018": "camp 2018",
+    "camp-2019": "camp 2019",
+    "home-works": "'home' works"
 }

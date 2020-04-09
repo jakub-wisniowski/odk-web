@@ -1,4 +1,6 @@
 <app-navbar-large *ngIf="!smallNavbarVisible"></app-navbar-large>
 <app-navbar-small *ngIf=smallNavbarVisible></app-navbar-small>
 
-<router-outlet></router-outlet>
+<div [@routerAnimation]="prepareRoute(outlet)" >
+    <router-outlet #outlet="outlet"></router-outlet>
+</div>

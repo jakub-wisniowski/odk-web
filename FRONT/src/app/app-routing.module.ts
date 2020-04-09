@@ -1,7 +1,13 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
+import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    component: HomeComponent,
+    data: {num: 1}
+  },
   {
     path: "campaigns",
     loadChildren: () =>
@@ -11,10 +17,6 @@ const routes: Routes = [
     path: "education",
     loadChildren: () =>
       import("./modules/education/education.module").then(m => m.EducationModule)
-  },
-  {
-    path: "home",
-    loadChildren: () => import("./modules/home/home.module").then(m => m.HomeModule)
   },
   {
     path: "readings",
@@ -30,7 +32,11 @@ const routes: Routes = [
     path: "summer-camp",
     loadChildren: () =>
       import("./modules/summer-camp/summer-camp.module").then(m => m.SummerCampModule)
-  }
+  },
+  {
+    path: "**",
+    redirectTo: ''
+  },
 ];
 
 @NgModule({

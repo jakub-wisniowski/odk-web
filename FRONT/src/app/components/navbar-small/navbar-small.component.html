@@ -47,7 +47,7 @@
             [ngClass]="{ active: activeRoute === '/summer-camp/camp-2018' }"
           >
             <a class="dropdown-item" [routerLink]="['/summer-camp/camp-2018']"
-              >Obóz 2018</a
+              >{{t("camp-2018") | titlecase}}</a
             >
           </li>
           <li
@@ -55,7 +55,7 @@
             [ngClass]="{ active: activeRoute === '/summer-camp/camp-2019' }"
           >
             <a class="dropdown-item" [routerLink]="['/summer-camp/camp-2019']"
-              >Obóz 2019</a
+              >{{t("camp-2019") | titlecase}}</a
             >
           </li>
         </ul>

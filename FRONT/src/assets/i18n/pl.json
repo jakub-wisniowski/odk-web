@@ -1,8 +1,10 @@
 {
-    "campaings": "kampanie",
+    "campaigns": "kampanie",
     "education": "edukacja",
     "home": "start",
     "readings": "czytanki",
     "resources": "materiały",
-    "summer-camp": "obóz letni"
+    "summer-camp": "obóz letni",
+    "camp-2018": "obóz 2018",
+    "camp-2019": "obóz 2019"
 }
