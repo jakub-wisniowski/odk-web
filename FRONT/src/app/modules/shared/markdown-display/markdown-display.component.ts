@@ -1,11 +1,12 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, OnDestroy } from '@angular/core';
 import { TranslocoService } from '@ngneat/transloco';
+import { Subscription } from 'rxjs';
 
 @Component({
     selector: 'markdown-display[postBaseUrl][fallbackLg]',
     templateUrl: './markdown-display.component.html'
 })
-export class MarkdownDisplayComponent implements OnInit {
+export class MarkdownDisplayComponent implements OnInit, OnDestroy {
 
     @Input()
     postBaseUrl: string;
@@ -14,9 +15,11 @@ export class MarkdownDisplayComponent implements OnInit {
     fallbackLg: string;
 
     post: string;
+
+    sub: Subscription;
   
     constructor(private translocoService: TranslocoService) { 
-      this.translocoService.langChanges$.subscribe(val => this.post = `${this.postBaseUrl}-${val}.md`);
+      this.sub = this.translocoService.langChanges$.subscribe(val => this.post = `${this.postBaseUrl}-${val}.md`);
     }
   
     ngOnInit(): void {
@@ -25,5 +28,9 @@ export class MarkdownDisplayComponent implements OnInit {
 
     onError() {
       this.post = `${this.postBaseUrl}-${this.fallbackLg}.md`
+    }
+
+    ngOnDestroy() {
+      this.sub.unsubscribe();
     }
 }
