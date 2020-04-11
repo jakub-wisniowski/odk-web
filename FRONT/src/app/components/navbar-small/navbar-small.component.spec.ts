@@ -1,16 +1,17 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { NavbarSmallComponent } from './navbar-small.component';
+import { NavbarSmallComponent } from "./navbar-small.component";
+import { RouterTestingModule } from "@angular/router/testing";
 
-describe('NavbarSmallComponent', () => {
+describe("NavbarSmallComponent", () => {
   let component: NavbarSmallComponent;
   let fixture: ComponentFixture<NavbarSmallComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NavbarSmallComponent ]
-    })
-    .compileComponents();
+      declarations: [NavbarSmallComponent],
+      imports: [RouterTestingModule],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +20,7 @@ describe('NavbarSmallComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

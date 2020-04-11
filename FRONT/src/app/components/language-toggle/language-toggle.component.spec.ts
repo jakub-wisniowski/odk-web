@@ -1,16 +1,17 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { LanguageToggleComponent } from './language-toggle.component';
+import { LanguageToggleComponent } from "./language-toggle.component";
+import { TranslocoTestingModule } from '@ngneat/transloco';
 
-describe('LanguageToggleComponent', () => {
+describe("LanguageToggleComponent", () => {
   let component: LanguageToggleComponent;
   let fixture: ComponentFixture<LanguageToggleComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LanguageToggleComponent ]
-    })
-    .compileComponents();
+      declarations: [LanguageToggleComponent],
+      imports:[TranslocoTestingModule]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +20,7 @@ describe('LanguageToggleComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
