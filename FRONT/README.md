@@ -1,7 +1,8 @@
 # FRONT
 
-Przed odpaleniem zainstaluj zależności: `npm i`
-
+Pobierz [Node](https://nodejs.org/en/download/)
+Zainstaluj Angulara: `npm i @angular/cli -g`
+Przed odpaleniem projektu zainstaluj zależności: `npm i`
 
 ## Budowanie
 
