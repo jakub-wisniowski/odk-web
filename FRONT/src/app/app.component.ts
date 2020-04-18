@@ -1,5 +1,4 @@
-import { Component, HostListener } from "@angular/core";
-import { MENU_BREAKPOINT } from "./modules/shared/magic-strings";
+import { Component } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
 import { routerAnimation } from "./modules/shared/animations";
 
@@ -10,18 +9,6 @@ import { routerAnimation } from "./modules/shared/animations";
   animations: [routerAnimation()],
 })
 export class AppComponent {
-  smallNavbarVisible: boolean;
-  constructor() {
-    this.smallNavbarVisible =
-      document.documentElement.offsetWidth < MENU_BREAKPOINT;
-  }
-
-  @HostListener("window: resize")
-  onResize() {
-    this.smallNavbarVisible =
-      document.documentElement.offsetWidth < MENU_BREAKPOINT;
-  }
-
   prepareRoute(outlet: RouterOutlet) {
     return outlet.activatedRouteData.num === undefined
       ? -1

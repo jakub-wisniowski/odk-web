@@ -1,53 +1,14 @@
-<div class="button-group" class="btn-group" dropdown [dropup]="dropup">
-  <a
-    dropdownToggle
-    class="nav-link dropdown-toggle clickable"
-    aria-controls="dropdown-basic"
-    style="padding-left: 0;"
-  >
-    {{ currentLanguage | uppercase }}
-
-    <span class="caret"></span>
-  </a>
-  <ng-container *ngIf="dropup"> <ul
-    id="dropdown-basic"
-    *dropdownMenu
-    class="dropdown-menu"
-    role="menu"
-    aria-labelledby="button-basic"
-  >
-    <li role="menuitem">
-      <a class="dropdown-item clickable" (click)="toggleLanguage('pl')">PL</a>
+<ul>
+    <li role="nav-item" *ngIf="currentLanguage !== 'pl'">
+      <a class="nav-link" (click)="toggleLanguage('pl')">polish</a>
     </li>
-    <li role="menuitem">
-      <a class="dropdown-item clickable" (click)="toggleLanguage('en')">EN</a>
+    <li role="nav-item" *ngIf="currentLanguage !== 'en'">
+      <a class="nav-link" (click)="toggleLanguage('en')">english</a>
     </li>
-    <li role="menuitem">
-      <a class="dropdown-item clickable" (click)="toggleLanguage('de')">DE</a>
+    <li role="nav-item" *ngIf="currentLanguage !== 'cz'">
+      <a class="nav-link" (click)="toggleLanguage('cz')">český</a>
     </li>
-    <li role="menuitem">
-      <a class="dropdown-item clickable" (click)="toggleLanguage('cz')">CZ</a>
+    <li role="nav-item" *ngIf="currentLanguage !== 'de'">
+      <a class="nav-link" (click)="toggleLanguage('de')">deutsch</a>
     </li>
-  </ul></ng-container>
-  <ng-container *ngIf="!dropup">
-    <ul
-      id="dropdown-basic"
-      *dropdownMenu
-      class="dropdown-menu dropdown-menu-right"
-      role="menu"
-      aria-labelledby="button-basic"
-    >
-      <li role="menuitem">
-        <a class="dropdown-item clickable" (click)="toggleLanguage('pl')">PL</a>
-      </li>
-      <li role="menuitem">
-        <a class="dropdown-item clickable" (click)="toggleLanguage('en')">EN</a>
-      </li>
-      <li role="menuitem">
-        <a class="dropdown-item clickable" (click)="toggleLanguage('de')">DE</a>
-      </li>
-      <li role="menuitem">
-        <a class="dropdown-item clickable" (click)="toggleLanguage('cz')">CZ</a>
-      </li>
-    </ul></ng-container>
-</div>
+</ul>

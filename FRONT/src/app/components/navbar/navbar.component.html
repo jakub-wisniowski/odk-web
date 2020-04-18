@@ -1,0 +1,112 @@
+<div class="menu-wrapper" [ngClass]="{ expanded: menuVisible }">
+  <nav *transloco="let t">
+    <button
+      class="navbar-toggler hamburger"
+      type="button"
+      (click)="toggleMenu()"
+    >
+      <img src="assets/images/logo.png" alt="toggle menu" width="100" />
+    </button>
+
+    <h2>
+      <span>Obóz dla</span>
+      <span>klimatu</span>
+    </h2>
+
+    <ul>
+      <li class="nav-item">
+        <a
+          [routerLink]="['/summer-camp']"
+          class="nav-link"
+          routerLinkActive="link-active"
+        >
+          {{ t("summer-camp") }}
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a
+          [routerLink]="['/education']"
+          class="nav-link"
+          routerLinkActive="link-active"
+        >
+          {{ t("education") }}
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a
+          [routerLink]="['/resources']"
+          class="nav-link"
+          routerLinkActive="link-active"
+        >
+          {{ t("resources") }}
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a
+          [routerLink]="['/readings']"
+          class="nav-link"
+          routerLinkActive="link-active"
+        >
+          {{ t("readings") }}
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          [routerLink]="['/campaigns']"
+          class="nav-link"
+          routerLinkActive="link-active"
+        >
+          {{ t("campaigns") }}
+        </a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul>
+      <li class="nav-item">
+        <a
+          href="https://www.facebook.com/obozdlaklimatu/"
+          target="_blank"
+          class="nav-link"
+        >
+          facebook
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a
+          href="https://www.youtube.com/channel/UC5rB4a7lI10vw0OzYTuXXcQ"
+          target="_blank"
+          class="nav-link"
+        >
+          youtube
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a
+          href="https://www.instagram.com/oboz_dla_klimatu/"
+          target="_blank"
+          class="nav-link"
+        >
+          instagram
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          href="https://www.flickr.com/people/182278868@N06/"
+          target="_blank"
+          class="nav-link"
+        >
+          flickr
+        </a>
+      </li>
+    </ul>
+    <hr />
+    <app-language-toggle></app-language-toggle>
+  </nav>
+</div>

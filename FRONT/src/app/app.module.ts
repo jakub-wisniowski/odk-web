@@ -8,16 +8,14 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslocoRootModule } from './transloco-root.module';
-import { NavbarLargeComponent } from './components/navbar-large/navbar-large.component';
-import { NavbarSmallComponent } from './components/navbar-small/navbar-small.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 import { LanguageToggleComponent } from './components/language-toggle/language-toggle.component';
 import { MarkdownModule } from 'ngx-markdown';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarLargeComponent,
-    NavbarSmallComponent,
+    NavbarComponent,
     LanguageToggleComponent
   ],
   imports: [
