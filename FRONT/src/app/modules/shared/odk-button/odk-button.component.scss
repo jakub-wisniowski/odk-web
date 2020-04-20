@@ -1,0 +1,17 @@
+@import "~src/styles/styles";
+
+button {
+    background-color: black;
+    box-shadow: 5px 5px $secondary-color;
+    color: white;
+    border-radius: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+
+    &:focus, &:hover {
+        background-color: $secondary-color;
+        box-shadow: 5px 5px black;
+        color: black;
+    }
+}

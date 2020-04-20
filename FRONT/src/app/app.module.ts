@@ -11,22 +11,23 @@ import { TranslocoRootModule } from './transloco-root.module';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LanguageToggleComponent } from './components/language-toggle/language-toggle.component';
 import { MarkdownModule } from 'ngx-markdown';
+import { SharedModule } from './modules/shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
-    LanguageToggleComponent
+    LanguageToggleComponent,
+    NavbarComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
-    ScullyLibModule,
     BrowserAnimationsModule,
+    BrowserModule,
+    BsDropdownModule.forRoot(),
     HttpClientModule,
     MarkdownModule.forRoot({ loader: HttpClient }),
-    TranslocoRootModule,
-    BsDropdownModule.forRoot()
+    ScullyLibModule,
+    TranslocoRootModule
   ],
   providers: [],
   bootstrap: [AppComponent]

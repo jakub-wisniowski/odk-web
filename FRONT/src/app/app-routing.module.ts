@@ -1,12 +1,11 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-import { HomeComponent } from './components/home/home.component';
+import { HomeComponent } from './modules/home/home.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
-    data: {num: 1}
+    loadChildren: () => import("./modules/home/home.module").then(m => m.HomeModule)
   },
   {
     path: "campaigns",
