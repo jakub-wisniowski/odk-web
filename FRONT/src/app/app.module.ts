@@ -11,7 +11,6 @@ import { TranslocoRootModule } from './transloco-root.module';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LanguageToggleComponent } from './components/language-toggle/language-toggle.component';
 import { MarkdownModule } from 'ngx-markdown';
-import { SharedModule } from './modules/shared/shared.module';
 
 @NgModule({
   declarations: [

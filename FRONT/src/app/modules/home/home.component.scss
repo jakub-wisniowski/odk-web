@@ -1,0 +1,42 @@
+@import "~src/styles/styles";
+
+$header-height: 40vh;
+
+.header {
+    width: 100%;
+    background-image: url("../../../assets/images/main-banner.jpg");
+    height: $header-height;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    z-index: -1;
+}
+
+
+.container {
+    &.header-overlay {
+        width: 100%;
+        height: $header-height;
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        padding-top: 40px;
+    }
+
+    &.content-container {
+        padding-top: $header-height;
+
+        #newsletter {
+            transform: translateY(calc(-50% - 5px));
+        }
+    }
+
+    odk-button {
+        margin-bottom: 20px;
+        display: block;
+    }
+
+    .quote {
+        margin: 50px 0;
+    }
+}

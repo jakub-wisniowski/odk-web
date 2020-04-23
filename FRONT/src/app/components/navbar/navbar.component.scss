@@ -1,6 +1,7 @@
 @import "~src/styles/styles";
 
 .menu-wrapper {
+  z-index: 1;
   position: fixed;
   top: 0;
   right: -250px;
@@ -33,6 +34,11 @@
       line-height: 26px;
       letter-spacing: 2px;
       text-align: justify;
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+      }
   
       span {
         display: block;

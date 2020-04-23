@@ -1,14 +1,14 @@
 <ul>
     <li role="nav-item" *ngIf="currentLanguage !== 'pl'">
-      <a class="nav-link" (click)="toggleLanguage('pl')">polish</a>
+      <a class="nav-link clickable" (click)="toggleLanguage('pl')">polish</a>
     </li>
     <li role="nav-item" *ngIf="currentLanguage !== 'en'">
-      <a class="nav-link" (click)="toggleLanguage('en')">english</a>
+      <a class="nav-link clickable" (click)="toggleLanguage('en')">english</a>
     </li>
     <li role="nav-item" *ngIf="currentLanguage !== 'cz'">
-      <a class="nav-link" (click)="toggleLanguage('cz')">český</a>
+      <a class="nav-link clickable" (click)="toggleLanguage('cz')">český</a>
     </li>
     <li role="nav-item" *ngIf="currentLanguage !== 'de'">
-      <a class="nav-link" (click)="toggleLanguage('de')">deutsch</a>
+      <a class="nav-link clickable" (click)="toggleLanguage('de')">deutsch</a>
     </li>
 </ul>

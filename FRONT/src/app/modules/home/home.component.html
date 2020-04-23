@@ -1,3 +1,33 @@
-<div class="container">
-    <odk-button link="/summer-camp">Obóz 2020</odk-button>
-</div>
+<section class="header"></section>
+
+<ng-container *transloco="let t">
+  <div class="container header-overlay">
+    <odk-button link="/summer-camp">{{t('home.camp2020')}}</odk-button>
+    <odk-button link="/contact">{{t('home.join-us')}}</odk-button>
+  </div>
+
+  <div class="container content-container">
+    <odk-button id="newsletter" link="/summer-camp"
+      >{{t('home.subscribe-to-newsletter')}}</odk-button
+    >
+    <div class="row">
+      <div class="col">
+        <span class="underlined">125 {{t('home.days-til-camp')}}</span>
+        <br />
+        <span
+          class="underlined"
+          style="display: inline-block; margin-top: 20px;"
+          >62 {{t('home.tons-of-coal')}}</span
+        >
+
+        <div class="quote">
+          <span>{{t('home.quote-1')}}</span>
+          <br />
+          <span>{{t('home.quote-2')}}</span>
+          <br />
+          <span>{{t('home.quote-3')}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>

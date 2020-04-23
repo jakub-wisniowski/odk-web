@@ -1,0 +1,28 @@
+
+.container {
+    padding: 0 30px;
+    max-width: 100%;
+}
+
+.underlined {
+    font-weight: 600;
+    position: relative;
+    font-size: 18px;
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -7px;
+        height: 3px;
+        background: $secondary_color;
+    }
+}
+
+.quote {
+    line-height: 2;
+    font-size: 14px;
+    font-style: italic;
+    color: rgb(187, 183, 183);
+}
